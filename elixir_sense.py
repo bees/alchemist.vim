@@ -1,4 +1,4 @@
-from __future__ import print_function
+#from __future__ import print_function
 import os
 import tempfile
 import re
@@ -100,7 +100,7 @@ class ElixirSenseClient:
         >>> alchemist.to_vim_suggestions([{'type': 'hint', 'value': 'Cloud.Event'}, {'subtype': 'struct', 'type': 'module', 'name': 'Event', 'summary': ''}, {'subtype': None, 'type': 'module', 'name': 'EventBroadcaster', 'summary': ''}, {'subtype': None, 'type': 'module', 'name': 'EventConsumer', 'summary': ''}, {'subtype': None, 'type': 'module', 'name': 'EventService', 'summary': ''}])
         'kind:m, word:Cloud.Event, abbr:Event, menu: struct, info: \\nkind:m, word:Cloud.EventBroadcaster, abbr:EventBroadcaster, menu: module, info: \\nkind:m, word:Cloud.EventConsumer, abbr:EventConsumer, menu: module, info: \\nkind:m, word:Cloud.EventService, abbr:EventService, menu: module, info: \\n'
         >>> alchemist.to_vim_suggestions([{'type': 'hint', 'value': 'Mix.'}, {'subtype': None, 'type': 'module', 'name': 'Mix', 'summary': ''}, {'subtype': None, 'type': 'module', 'name': 'Ecto', 'summary': ''},{'origin': 'Mix', 'arity': 0, 'name': 'compilers', 'args': '', 'type': 'function', 'spec': '', 'summary': 'Returns the default compilers used by Mix.'}])
-        'kind:m, word:Mix., abbr:Mix, menu: module, info: \\nkind:m, word:Mix.Ecto, abbr:Ecto, menu: module, info: \\nkind:f, word:Mix.compilers, abbr:compilers(), menu: Mix, info: Returns the default compilers used by Mix.\\n'
+        'kind:m, word:Mix.Ecto, abbr:Ecto, menu: module, info: \\nkind:m, word:Mix., abbr:Mix, menu: module, info: \\nkind:f, word:Mix.compilers, abbr:compilers(), menu: Mix, info: Returns the default compilers used by Mix.\\n'
         >>> alchemist.to_vim_suggestions([{'type': 'hint', 'value': 'UserService.'}, {'subtype': None, 'type': 'module', 'name': 'UserService', 'summary': ''}, {'origin': 'interface.UserService', 'arity': 0, 'name': 'all_pending_users', 'args': '', 'type': 'function', 'spec': '', 'summary': 'returns all users that requested invitation'}])
         'kind:m, word:UserService., abbr:UserService, menu: module, info: \\nkind:f, word:UserService.all_pending_users, abbr:all_pending_users(), menu: interface.UserService, info: returns all users that requested invitation\\n'
         >>> alchemist.to_vim_suggestions([{'type': 'hint', 'value': ':gen_'}, {'subtype': None, 'type': 'module', 'name': 'gen_event', 'summary': ''}, {'subtype': None, 'type': 'module', 'name': 'gen_fsm', 'summary': ''}])
